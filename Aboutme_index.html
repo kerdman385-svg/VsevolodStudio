@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про мене</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="site-content" class="hidden">
+        <header>
+            <nav>
+                <div class="logo">Vsevolod Studio</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" data-lang-key="nav-home">Головна</a></li>
+                    <li><a href="forma.html" data-lang-key="nav-prices">Послуги</a></li>
+                    <li><a href="skills.html" data-lang-key="nav-skills">Навички</a></li>
+                    <li><a href="Contacts.html" data-lang-key="nav-video">Відео</a></li>
+                    <li><a href="galery.html" data-lang-key="nav-gallery">Галерея</a></li>
+                    <li><a href="Aboutme_index.html" class="active" data-lang-key="nav-about">Про мене</a></li>
+                    
+                    <div class="custom-dropdown">
+                        <button class="dropdown-btn" id="current-theme-label">🌓 Тема</button>
+                        <div class="dropdown-content">
+                            <button onclick="setTheme('dark')">🌙 Темна</button>
+                            <button onclick="setTheme('light')">☀️ Ярка</button>
+                        </div>
+                    </div>
+                    
+                    <div class="custom-dropdown">
+                        <button class="dropdown-btn">🎨 Кольори RGB</button>
+                        <div class="dropdown-content rgb-dropdown">
+                            <div class="rgb-row"><span>Колір 1</span><input type="color" id="rgb-color-1"></div>
+                            <div class="rgb-row"><span>Колір 2</span><input type="color" id="rgb-color-2"></div>
+                            <div class="rgb-row"><span>Колір 3</span><input type="color" id="rgb-color-3"></div>
+                            <button id="reset-rgb-btn" class="btn-rainbow">Скинути</button>
+                        </div>
+                    </div>
+                    
+                    <div class="custom-dropdown">
+                        <button class="dropdown-btn" id="current-lang-label">UA</button>
+                        <div class="dropdown-content">
+                            <button onclick="changeLanguage('uk')">Українська</button>
+                            <button onclick="changeLanguage('en')">English</button>
+                        </div>
+                    </div>
+                    <li><button id="btn-logout" class="logout-btn" data-lang-key="nav-logout">Вийти</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="about-me-box">
+            <h3 data-lang-key="about-title" style="text-align:center; margin-bottom: 20px;">Анкета про себе</h3>
+            <p><span><b>Прізвище та ім'я:</b></span> <span>Кердман Всеволод</span></p>
+            <p><span><b>Вік:</b></span> <span>14 років</span></p>
+            <p><span><b>Дата народження:</b></span> <span>21.10.2012</span></p>
+            <p><span><b>Місто:</b></span> <span>Україна</span></p>
+            <p><span><b>Хобі та захоплення:</b></span> <span>Web-розробка, створення сайтів, комп'ютерні ігри</span></p>
+            <p><span><b>Улюблені ігри:</b></span> <span>Minecraft, CS2</span></p>
+            <p><span><b>Що надихає:</b></span> <span>Круті веб-інтерфейси, успіхи у кодуванні</span></p>
+            <p><span><b>Ціль на рік:</b></span> <span>Добре опанувати JavaScript, покращити навички верстки</span></p>
+        </div>
+        <footer><p>&copy; Всеволод Кердман. Усі права захищені.</p></footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

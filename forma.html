@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Послуги та Ціни</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="site-content" class="hidden">
+        <header>
+            <nav>
+                <div class="logo">Vsevolod Studio</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" data-lang-key="nav-home">Головна</a></li>
+                    <li><a href="forma.html" class="active" data-lang-key="nav-prices">Послуги</a></li>
+                    <li><a href="skills.html" data-lang-key="nav-skills">Навички</a></li>
+                    <li><a href="Contacts.html" data-lang-key="nav-video">Відео</a></li>
+                    <li><a href="galery.html" data-lang-key="nav-gallery">Галерея</a></li>
+                    <li><a href="Aboutme_index.html" data-lang-key="nav-about">Про мене</a></li>
+                    
+                    <div class="custom-dropdown">
+                        <button class="dropdown-btn" id="current-theme-label">🌓 Тема</button>
+                        <div class="dropdown-content">
+                            <button onclick="setTheme('dark')">🌙 Темна</button>
+                            <button onclick="setTheme('light')">☀️ Ярка</button>
+                        </div>
+                    </div>
+                    
+                    <div class="custom-dropdown">
+                        <button class="dropdown-btn">🎨 Кольори RGB</button>
+                        <div class="dropdown-content rgb-dropdown">
+                            <div class="rgb-row"><span>Колір 1</span><input type="color" id="rgb-color-1"></div>
+                            <div class="rgb-row"><span>Колір 2</span><input type="color" id="rgb-color-2"></div>
+                            <div class="rgb-row"><span>Колір 3</span><input type="color" id="rgb-color-3"></div>
+                            <button id="reset-rgb-btn" class="btn-rainbow">Скинути</button>
+                        </div>
+                    </div>
+                    
+                    <div class="custom-dropdown">
+                        <button class="dropdown-btn" id="current-lang-label">UA</button>
+                        <div class="dropdown-content">
+                            <button onclick="changeLanguage('uk')">Українська</button>
+                            <button onclick="changeLanguage('en')">English</button>
+                        </div>
+                    </div>
+                    <li><button id="btn-logout" class="logout-btn" data-lang-key="nav-logout">Вийти</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title" data-lang-key="services-title">Мої послуги та прайс-лист</h2>
+            <div class="grid">
+                <div class="card">
+                    <div><h3>💻 Розробка сайтів</h3><p style="color:var(--text-muted); margin-top:10px;">Верстка сучасних лендінгів та особистих портфоліо на HTML и CSS.</p></div>
+                    <div><div class="card-price">до €5.00</div><button class="btn-rainbow order-btn" data-service="Розробка сайту">Замовити</button></div>
+                </div>
+                <div class="card">
+                    <div><h3>⚙️ Minecraft Плагіни</h3><p style="color:var(--text-muted); margin-top:10px;">Налаштування серверів (LuckPerms, TAB) та збірок плагінів 1.16.5 / 1.20.1.</p></div>
+                    <div><div class="card-price">до €3.50</div><button class="btn-rainbow order-btn" data-service="Minecraft Плагін">Замовити</button></div>
+                </div>
+                <div class="card">
+                    <div><h3>⚡ Моди та Скрипти</h3><p style="color:var(--text-muted); margin-top:10px;">Розробка кастомних модифікацій Forge/Fabric та написання ігрових скриптів.</p></div>
+                    <div><div class="card-price">до €4.50</div><button class="btn-rainbow order-btn" data-service="Кастомний Мод">Замовити</button></div>
+                </div>
+            </div>
+        </section>
+
+        <div id="order-modal" class="modal hidden">
+            <div class="modal-content">
+                <span id="close-modal-btn" class="close-modal">&times;</span>
+                <h2>Оформлення замовлення</h2>
+                <form id="order-form" class="auth-form">
+                    <input type="hidden" id="order-service">
+                    <input type="text" id="client-firstname" placeholder="Ваше ім'я" required>
+                    <input type="text" id="client-contact" placeholder="Ваш Telegram / Discord" required>
+                    <textarea id="order-details" placeholder="Опишіть деталі вашого замовлення..." rows="4" required></textarea>
+                    <button type="submit" class="btn-rainbow">Надіслати замовлення</button>
+                </form>
+            </div>
+        </div>
+        <footer><p>&copy; Всеволод Кердман. Усі права захищені.</p></footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

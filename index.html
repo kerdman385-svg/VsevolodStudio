@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Studio | Головна</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Экран авторизации (Вход / Регистрация) -->
+    <div id="auth-screen" class="auth-wrapper hidden">
+        <div class="auth-box">
+            <h2 id="auth-title" data-lang-key="auth-title">Вітаємо у <span>Web Studio</span></h2>
+            <p id="auth-desc" data-lang-key="auth-desc" style="color:var(--text-muted); font-size:14px; margin-top:5px; text-align:center;"></p>
+            <form id="auth-form" class="auth-form">
+                <input type="text" id="auth-username" placeholder="Логін" required autocomplete="username">
+                <input type="email" id="auth-email" placeholder="Email" autocomplete="email">
+                <input type="password" id="auth-password" placeholder="Пароль" required autocomplete="current-password">
+                <button type="submit" id="auth-submit-btn" class="btn-rainbow" data-lang-key="auth-btn">Увійти</button>
+            </form>
+            <p style="margin-top: 20px; text-align: center; font-size: 14px;">
+                <span id="auth-toggle-text">Ще не маєте акаунту?</span> 
+                <a href="#" id="auth-toggle-link" style="color: var(--c3); text-decoration: none; font-weight: 600;">Зареєструватися</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Основной контент сайта -->
+    <div id="site-content" class="hidden">
+        <header>
+            <nav>
+                <div class="logo">Vsevolod Studio</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active" data-lang-key="nav-home">Головна</a></li>
+                    <li><a href="forma.html" data-lang-key="nav-prices">Послуги</a></li>
+                    <li><a href="skills.html" data-lang-key="nav-skills">Навички</a></li>
+                    <li><a href="Contacts.html" data-lang-key="nav-video">Відео</a></li>
+                    <li><a href="galery.html" data-lang-key="nav-gallery">Галерея</a></li>
+                    <li><a href="Aboutme_index.html" data-lang-key="nav-about">Про мене</a></li>
+                    
+                    <div class="custom-dropdown">
+                        <button class="dropdown-btn" id="current-theme-label">🌓 Тема</button>
+                        <div class="dropdown-content">
+                            <button onclick="setTheme('dark')">🌙 Темна</button>
+                            <button onclick="setTheme('light')">☀️ Ярка</button>
+                        </div>
+                    </div>
+                    
+                    <div class="custom-dropdown">
+                        <button class="dropdown-btn">🎨 Кольори RGB</button>
+                        <div class="dropdown-content rgb-dropdown">
+                            <div class="rgb-row"><span>Колір 1</span><input type="color" id="rgb-color-1"></div>
+                            <div class="rgb-row"><span>Колір 2</span><input type="color" id="rgb-color-2"></div>
+                            <div class="rgb-row"><span>Колір 3</span><input type="color" id="rgb-color-3"></div>
+                            <button id="reset-rgb-btn" class="btn-rainbow">Скинути</button>
+                        </div>
+                    </div>
+                    
+                    <div class="custom-dropdown">
+                        <button class="dropdown-btn" id="current-lang-label">UA</button>
+                        <div class="dropdown-content">
+                            <button onclick="changeLanguage('uk')">Українська</button>
+                            <button onclick="changeLanguage('en')">English</button>
+                        </div>
+                    </div>
+                    <li><button id="btn-logout" class="logout-btn" data-lang-key="nav-logout">Вийти</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="hero" style="text-align:center; max-width:800px; margin:120px auto 0 auto; padding:0 20px;">
+            <h1 style="font-size:3.5rem; margin-bottom:20px;" data-lang-key="hero-title">Привіт, я <span>Всеволод Кердман</span></h1>
+            <p style="color:var(--text-muted); font-size:1.2rem; margin-bottom:30px;" data-lang-key="hero-desc">Починаючий Web-розробник. Створюю плагіни, моди та красиві сайти.</p>
+            <a href="forma.html" class="btn-rainbow" style="text-decoration:none;" data-lang-key="hero-btn">Дивитись прайс-лист</a>
+        </main>
+        <footer><p>&copy; Всеволод Кердман. Усі права захищені.</p></footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
