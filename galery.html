@@ -1,90 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Studio | Портфоліо</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Додаткові стилі для красивого оформлення карток робіт */
-        .project-info {
-            padding: 15px;
-            text-align: left;
-        }
-        .project-title {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        .project-desc {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 15px;
-            line-height: 1.4;
-        }
-        .project-link {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: #0070f3;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            transition: background 0.2s;
-        }
-        .project-link:hover {
-            background-color: #0051a8;
-        }
-    </style>
 </head>
 <body>
-    <div id="site-content" class="hidden">
-        <!-- Навігація -->
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="forma.html" data-lang-key="nav-prices">Послуги</a></li>
-                    <li><a href="skills.html" data-lang-key="nav-skills">Навички</a></li>
-                    <li><a href="Contacts.html" data-lang-key="nav-video">Відео</a></li>
-                    <li><a href="galery.html" class="active" data-lang-key="nav-gallery">Портфоліо</a></li>
-                    <li><a href="Aboutme_index.html" data-lang-key="nav-about">Про мене</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section class="section">
-            <h2 class="section-title" data-lang-key="gallery-title">Мої роботи та проєкти</h2>
-            <div class="gallery-grid">
+    <header>
+        <nav>
+            <div class="logo">Vsevolod Studio</div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-lang-key="nav-home">Головна</a></li>
+                <li><a href="forma.html" data-lang-key="nav-prices">Послуги</a></li>
+                <li><a href="skills.html" data-lang-key="nav-skills">Навички</a></li>
+                <li><a href="Contacts.html" data-lang-key="nav-video">Відео</a></li>
+                <li><a href="galery.html" class="active" data-lang-key="nav-gallery">Портфоліо</a></li>
+                <li><a href="Aboutme_index.html" data-lang-key="nav-about">Про мене</a></li>
                 
-                <!-- Робота 1 -->
-                <div class="card">
-                    <img src="images.jfif" alt="Сайт-візитка" style="width:100%; border-radius:10px 10px 0 0; object-fit:cover; height:180px;">
-                    <div class="project-info">
-                        <div class="project-title">Сайт-візитка</div>
-                        <p class="project-desc">Сучасний адаптивний сайт для бізнесу з темною темою та анімаціями.</p>
-                        <a href="https://your-link-1.com" target="_blank" class="project-link">Дивитися проєкт</a>
+                <!-- Кнопка приложения PWA -->
+                <li><button id="btn-install" class="btn-rainbow" style="display: none; padding: 8px 14px; font-size: 15px; border-radius: 8px; cursor: pointer;">Завантажити додаток</button></li>
+                
+                <div class="custom-dropdown">
+                    <button class="dropdown-btn" id="current-theme-label">🌓 Тема</button>
+                    <div class="dropdown-content">
+                        <button onclick="setTheme('dark')">🌙 Темна</button>
+                        <button onclick="setTheme('light')">☀️ Ярка</button>
                     </div>
                 </div>
-
-                <!-- Робота 2 -->
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Інтернет-магазин" style="width:100%; border-radius:10px 10px 0 0; object-fit:cover; height:180px;">
-                    <div class="project-info">
-                        <div class="project-title">Інтернет-магазин</div>
-                        <p class="project-desc">Зручний онлайн-магазин з кошиком товарів та кастомним вибором кольорів.</p>
-                        <a href="https://your-link-2.com" target="_blank" class="project-link">Дивитися проєкт</a>
+                
+                <div class="custom-dropdown">
+                    <button class="dropdown-btn">🎨 Кольори RGB</button>
+                    <div class="dropdown-content rgb-dropdown">
+                        <div class="rgb-row"><span>Колір 1</span><input type="color" id="rgb-color-1"></div>
+                        <div class="rgb-row"><span>Колір 2</span><input type="color" id="rgb-color-2"></div>
+                        <div class="rgb-row"><span>Колір 3</span><input type="color" id="rgb-color-3"></div>
+                        <button id="reset-rgb-btn" class="btn-rainbow">Скинути</button>
                     </div>
                 </div>
-
-                <!-- Робота 3 -->
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=600&q=80" alt="Веб-додаток" style="width:100%; border-radius:10px 10px 0 0; object-fit:cover; height:180px;">
-                    <div class="project-info">
-                        <div class="project-title">Landing Page</div>
-                        <p class="project-desc">Посадкова сторінка для рекламної кампанії студії дизайну.</p>
-                        <a href="https://your-link-3.com" target="_blank" class="project-link">Дивитися проєкт</a>
+                
+                <div class="custom-dropdown">
+                    <button class="dropdown-btn" id="current-lang-label">UA</button>
+                    <div class="dropdown-content">
+                        <button onclick="changeLanguage('uk')">Українська</button>
+                        <button onclick="changeLanguage('en')">English</button>
                     </div>
                 </div>
+                <li><button id="btn-logout" class="logout-btn" data-lang-key="nav-logout">Вийти</button></li>
+            </ul>
+        </nav>
+    </header>
 
-            </div>
+    <div id="site-content" class="hidden">
+        <section class="section">
+            <h2 class="section-title" data-lang-key="gallery-title">Галерея зображень</h2>
+   <div class="gallery-grid">
+    <!-- Перший проєкт -->
+    <div class="card" style="text-align: center; padding: 30px 20px;">
+        <h3>Назва проєкту 1</h3>
+        <p style="color: var(--text-muted); margin: 15px 0;">Опис першого сайту, який я створив.</p>
+        <a href="https://kerdman385-svg.github.io/me-site3/" target="_blank" class="btn-rainbow" style="display: inline-block; padding: 10px 20px; text-decoration: none; border-radius: 8px;">Перейти на сайт</a>
+    </div>
+
+    <!-- Другий проєкт -->
+  <div class="card" style="text-align: center; padding: 30px 20px; border: 2px dashed var(--border-color);">
+        <h3 style="color: var(--text-muted);">🚀 Скоро новий проєкт</h3>
+        <p style="font-size: 1.1rem; margin: 15px 0; font-weight: bold;">Тут може бути ваш сайт!</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Замовляйте розробку в розділі Послуги.</p>
+    </div>
+
+    <!-- Третій проєкт (Заглушка) -->
+    <div class="card" style="text-align: center; padding: 30px 20px; border: 2px dashed var(--border-color);">
+        <h3 style="color: var(--text-muted);">🚀 Скоро новий проєкт</h3>
+        <p style="font-size: 1.1rem; margin: 15px 0; font-weight: bold;">Тут може бути ваш сайт!</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Замовляйте розробку в розділі Послуги.</p>
+    </div>
+</div>
         </section>
         <footer><p>&copy; Всеволод Кердман. Усі права захищені.</p></footer>
     </div>
