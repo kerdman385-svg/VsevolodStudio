@@ -16,7 +16,7 @@ const translations = {
         "nav-prices": "Послуги", 
         "nav-skills": "Навички",
         "nav-video": "Відео", 
-        "nav-gallery": "Галерея", 
+        "nav-gallery": "Портфоліо", 
         "nav-about": "Про мене", 
         "nav-logout": "Вийти",
         "hero-title": "Привіт, я <span>Всеволод Кердман</span>",
@@ -25,7 +25,7 @@ const translations = {
         "services-title": "Мої послуги та прайс-лист",
         "skills-title": "Мої навички",
         "video-title": "Відеоролики", 
-        "gallery-title": "Галерея зображень", 
+        "gallery-title": "Портфоліо", 
         "about-title": "Анкета про себе"
     },
     en: {
