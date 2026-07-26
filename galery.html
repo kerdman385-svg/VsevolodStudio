@@ -3,8 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Studio | Галерея</title>
+    <title>Web Studio | Портфоліо</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Додаткові стилі для красивого оформлення карток робіт */
+        .project-info {
+            padding: 15px;
+            text-align: left;
+        }
+        .project-title {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .project-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .project-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #0070f3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .project-link:hover {
+            background-color: #0051a8;
+        }
+    </style>
 </head>
 <body>
     <div id="site-content" class="hidden">
@@ -16,7 +47,7 @@
                     <li><a href="forma.html" data-lang-key="nav-prices">Послуги</a></li>
                     <li><a href="skills.html" data-lang-key="nav-skills">Навички</a></li>
                     <li><a href="Contacts.html" data-lang-key="nav-video">Відео</a></li>
-                    <li><a href="galery.html" class="active" data-lang-key="nav-gallery">Галерея</a></li>
+                    <li><a href="galery.html" class="active" data-lang-key="nav-gallery">Портфоліо</a></li>
                     <li><a href="Aboutme_index.html" data-lang-key="nav-about">Про мене</a></li>
                     
                     <div class="custom-dropdown">
@@ -50,11 +81,39 @@
         </header>
 
         <section class="section">
-            <h2 class="section-title" data-lang-key="gallery-title">Галерея зображень</h2>
+            <h2 class="section-title" data-lang-key="gallery-title">Мої роботи та проєкти</h2>
             <div class="gallery-grid">
-                <div class="card"><img src="images.jfif" alt="Локальне фото" style="width:100%; border-radius:10px; object-fit:cover; height:220px;"></div>
-                <div class="card"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Море" style="width:100%; border-radius:10px; object-fit:cover; height:220px;"></div>
-                <div class="card"><img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=600&q=80" alt="Місто" style="width:100%; border-radius:10px; object-fit:cover; height:220px;"></div>
+                
+                <!-- Робота 1 -->
+                <div class="card">
+                    <img src="images.jfif" alt="Сайт-візитка" style="width:100%; border-radius:10px 10px 0 0; object-fit:cover; height:180px;">
+                    <div class="project-info">
+                        <div class="project-title">Сайт-візитка</div>
+                        <p class="project-desc">Сучасний адаптивний сайт для бізнесу з темною темою та анімаціями.</p>
+                        <a href="https://your-link-1.com" target="_blank" class="project-link">Дивитися проєкт</a>
+                    </div>
+                </div>
+
+                <!-- Робота 2 -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Інтернет-магазин" style="width:100%; border-radius:10px 10px 0 0; object-fit:cover; height:180px;">
+                    <div class="project-info">
+                        <div class="project-title">Інтернет-магазин</div>
+                        <p class="project-desc">Зручний онлайн-магазин з кошиком товарів та кастомним вибором кольорів.</p>
+                        <a href="https://your-link-2.com" target="_blank" class="project-link">Дивитися проєкт</a>
+                    </div>
+                </div>
+
+                <!-- Робота 3 -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=600&q=80" alt="Веб-додаток" style="width:100%; border-radius:10px 10px 0 0; object-fit:cover; height:180px;">
+                    <div class="project-info">
+                        <div class="project-title">Landing Page</div>
+                        <p class="project-desc">Посадкова сторінка для рекламної кампанії студії дизайну.</p>
+                        <a href="https://your-link-3.com" target="_blank" class="project-link">Дивитися проєкт</a>
+                    </div>
+                </div>
+
             </div>
         </section>
         <footer><p>&copy; Всеволод Кердман. Усі права захищені.</p></footer>
