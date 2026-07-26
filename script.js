@@ -17,7 +17,7 @@ const translations = {
         "services-title": "Мої послуги та прайс-лист",
         "skills-title": "Мої навички",
         "video-title": "Відеоролики",
-        "gallery-title": "Галерея зображень",
+        "gallery-title": "Мої проєкти",
         "about-title": "Анкета про себе"
     },
     en: {
