@@ -7,7 +7,7 @@ const translations = {
         "nav-prices": "Послуги",
         "nav-skills": "Навички",
         "nav-video": "Відео",
-        "nav-gallery": "Галерея",
+        "nav-gallery": "Портфоліо",
         "nav-about": "Про мене",
         "nav-logout": "Вийти",
         "auth-title": "Вітаємо у <span>Web Studio</span>",
@@ -25,7 +25,7 @@ const translations = {
         "nav-prices": "Services",
         "nav-skills": "Skills",
         "nav-video": "Video",
-        "nav-gallery": "Gallery",
+        "nav-gallery": "Portfolio",
         "nav-about": "About me",
         "nav-logout": "Logout",
         "auth-title": "Welcome to <span>Web Studio</span>",
@@ -35,7 +35,7 @@ const translations = {
         "services-title": "My Services & Price List",
         "skills-title": "My Skills",
         "video-title": "Video Clips",
-        "gallery-title": "Image Gallery",
+        "gallery-title": "My Projects",
         "about-title": "Profile About Me"
     }
 };
